@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,600&display=swap');
+
+:root {
+    --bgcolor:  rgb(204, 175, 7);
+}
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #FCF6F5FF;
+    min-height: 100vh;
+    max-width: 100vw;
+    display: grid;
+    grid-template-rows: 4rem 10fr 2rem;
+    font-family: 'Poppins', sans-serif;
+    animation: backgroundChange 90s ease-in 1s infinite forwards ;
+    overflow: hidden;
+
+}
+.header {
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    border-bottom: 4px solid #000;
+    animation: bottomBorderChange 90s ease-in 1s infinite forwards ;
+    transition: 500ms ease-in;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 2rem00;
+}
+@keyframes bottomBorderChange {
+    0% {
+    border-bottom: 4px solid #fff;
+
+    }
+    25% {
+    border-bottom: 4px solid black;
+
+    }
+    50% {
+    border-bottom: 4px solid #fff;
+    
+
+    }
+    75% {
+    border-bottom: 4px solid black;
+
+
+    }
+    100% {
+    border-bottom: 4px solid #fff;
+
+    }
+}
+@keyframes backgroundChange {
+    0% {
+    background-color: #FCF6F5FF;
+
+    }
+    25% {
+    background-color:  var(--bgcolor);
+
+    }
+    50% {
+    background-color:  #FCF6F5FF;
+    
+
+    }
+    75% {
+    background-color:  var(--bgcolor);
+
+
+
+    }
+    100% {
+    background-color:  #FCF6F5FF;
+
+    }
+}
+@keyframes borderChange {
+    0% {
+    border: 4px solid #fff;
+
+    }
+    25% {
+    border: 4px solid gold;
+
+    }
+    50% {
+    border: 4px solid #fff;
+    
+
+    }
+    75% {
+    border: 4px solid gold;
+
+
+    }
+    100% {
+    border-bottom: 4px solid #fff;
+
+    }
+}
+.logo {
+    height: 6rem;
+    width: 6rem;
+    position: absolute;
+    border-radius: 100%;
+    border: 4px solid #fff;
+    left: 1%;
+    top: 18%;
+    box-shadow: 0 0 25px #000;
+    color: #fff;
+    font-weight: 900;
+    background: radial-gradient( gold, white, white, white, white, firebrick, black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: borderChange 90s ease-in 1s infinite forwards ;
+
+    
+
+}
+.logo span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 6px solid rgba(153, 0, 18, 0.801);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-shadow: 0 0 5px #000;
+
+}
+.logo img {
+    height: 80%;
+}
+.header ul.nav {
+    display: flex;
+    height: 100%;
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0 1rem;
+    position: relative;
+    top: 0;
+    height: 4px;
+}
+
+.header ul.nav li {
+    height: 30px;
+    /* width: 12px; */
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgba(153, 0, 18, 0.801);
+    box-shadow: 0 0 5px #FCF6F5FF;
+    /* position: absolute; */
+    animation: backgroundChange 90s ease-in 1s infinite forwards ;
+
+
+
+}
+
+.header ul.nav li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 0 0 2px gold;
+}
+/* Main Styles */
+.main-home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    
+}
+.main-portfolio {
+    display: none;
+    background-color:  rgb(6 6 6 / 64%);
+    grid-template-rows: 4fr 2fr;
+    max-width: 100vw;
+
+}
+/* Main End */
+
+/* Portfolio Styles */
+
+section.big-carousel {
+    /* background-color: #fff; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #fff;
+    text-shadow: 0px 0px 2px #000;
+}
+section.big-carousel .reveal {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+section.big-carousel .reveal > img{
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    box-shadow: 0px 0px 5px rgb(6 6 6 / 64%);
+}
+section.big-carousel .info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+section.big-carousel h3 {
+    font-size: 3rem;
+    color: gold;
+    text-align: center;
+}
+section.big-carousel .connect {
+    text-decoration: none;
+    background-color: gold;
+    width: fit-content;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #fff;
+}
+section.big-carousel .info p {
+    font-size: 1.4rem;
+}
+section.auto-carousel {
+    /* background-color: red; */
+    display: flex;
+    position: relative;
+}
+section.auto-carousel .slider {
+    display: flex;
+    position: relative;
+    width: 100%;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 1rem;
+}
+.switcher {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 35%;
+    width: 100%;
+
+}
+.switcher button {
+    background: #0000008e;
+    border-radius: 0 50px 50px 0;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0 1rem;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0.40;
+}
+.switcher button:hover {
+    opacity: 1;
+}
+.switcher button:nth-child(2) {
+    border-radius: 50px 0 0 50px;
+}
+section.auto-carousel div.project-card {
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    width: 13rem;
+    margin: 1rem 0;
+    height: 8rem;
+}
+.project-card img {
+    width: 100%;
+    height: 100%;
+}
+.project-card span.descript {
+    position: absolute;
+    background-color: #0000007c;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    height: 35%;
+    color: #fff;
+    font-size: 1.4rem;
+    right: 0;
+}
+.project-card:hover .descript, .descript {
+    height: 60%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform translate-y 150ms;
+}
+/* Portfolio Styles End */
+.footer {
+    background-color: rgba(0, 0, 0, 0.849);
+
+}
+.description {
+    background-color:  rgb(6 6 6 / 64%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3rem;
+
+}
+.description p {
+    position: relative;
+    background-color:  rgba(255, 217, 0, 0.589);
+    padding: 1rem 2rem;
+    text-shadow: 0 0 5px #000;
+    right: -15%;
+    border: 2px solid #FCF6F5FF;
+    box-shadow: 0 0 20px #000;
+    text-align: center;
+    /* color: #fff; */
+    font-weight: 800;
+    /* font-size: 1rem; */
+    border-radius: 0 50px 0 50px ;
+    /* animation: borderChange 90s ease-in 1s infinite forwards ; */
+
+
+}
+.aboutMe::before {
+    content: "a Software Engineer";
+    position: absolute;
+    width: fit-content;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    /* font-size: 2rem; */
+    animation: roles 10s ease-in 1ms infinite forwards;
+    right: -8%;
+    transition: 500ms ease-in;
+    bottom: -38%;
+    border-radius: 0px 50px 50px 50px;
+    /* border: 4px solid #fff; */
+    box-shadow: 0 0 20px #000;
+    background-color:  #fff;
+    z-index: 1000;
+
+
+}
+@keyframes roles {
+    0% {
+        content: "a Photographer";
+    }
+    20% {
+        content: "a Reader";
+    }
+}
+.aboutMe::after {
+    content: "I am";
+    position: absolute;
+    font-size: 2rem;
+    height: 2.5rem;
+    width: 15rem;
+    word-spacing: 5px;
+    left: -8%;
+    top: -38%;
+    /* border: 4px solid #fff; */
+    border-radius: 50px 50px 0px 50px;
+    /* border-bottom: none; */
+    box-shadow: -5px 0 20px #000;
+    background-color:  #fff;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+
+}
+.name {
+    color: #000;
+    font-size: 3rem;
+    text-shadow:  0 0 2px #fff;
+}
+.roles {
+    text-shadow:  0 0 2px #000;
+
+}
+.image {
+    background-image: url(./images/fidelity2.png);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.image-overlay {
+    height: 100%;
+    background: radial-gradient(transparent, transparent, transparent, rgb(6 6 6 / 64%), rgb(6 6 6 / 64%));
+}
